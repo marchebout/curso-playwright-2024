@@ -1,0 +1,17 @@
+{
+  "name": "curso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./pom/tests/ --reporter html:test_results/resultados.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "testcafe": "^2.0.0",
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
