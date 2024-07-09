@@ -8,3 +8,5 @@ package-lock.json
 .DS_Store
 tests-examples/
 test_results/
+pom/tests/example.spec.js
+pom/tests/test-1.spec.ts

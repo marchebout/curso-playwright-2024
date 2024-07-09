@@ -1,17 +1,19 @@
 {
-  "name": "curso",
+  "name": "interview",
   "version": "1.0.0",
-  "description": "",
+  "description": "Instrucciones",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./pom/tests/ --reporter html:test_results/resultados.html"
+    "test-frontend": "npx playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.9"
+  },
   "dependencies": {
-    "dotenv": "^16.0.2",
-    "testcafe": "^2.0.0",
-    "testcafe-reporter-html": "^1.4.6"
+    "dotenv": "^16.4.5"
   }
 }
