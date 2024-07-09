@@ -12,5 +12,7 @@ export const CREDENTIALS = {
 }
 
 export const MESSAGES = {
-    WRONGUSRMESSAGE: 'Epic sadface: Username and password do not match any user in this service'
+    WRONGUSRMESSAGE: 'Epic sadface: Username and password do not match any user in this service',
+    NULLUSRMESSAGE: 'Epic sadface: Username is required',
+    NULLPASSMESSAGE: 'Epic sadface: Password is required'
 }

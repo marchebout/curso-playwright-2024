@@ -17,3 +17,17 @@ test('Login functionality - bad username', async ({ page }) => {
   await loginPage.submitLoginForm(CREDENTIALS.WRONGUSR,CREDENTIALS.PSW);
   await expect(loginPage.wrongmessage).toHaveText(MESSAGES.WRONGUSRMESSAGE)
 });
+
+test('Login functionality - null username', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  await page.goto(URLS.URL);
+  await loginPage.submitLoginForm(null,CREDENTIALS.PSW);
+  await expect(loginPage.wrongmessage).toHaveText(MESSAGES.NULLUSRMESSAGE)
+});
+
+test('Login functionality - null pass', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  await page.goto(URLS.URL);
+  await loginPage.submitLoginForm(CREDENTIALS.USR,null);
+  await expect(loginPage.wrongmessage).toHaveText(MESSAGES.NULLPASSMESSAGE)
+});

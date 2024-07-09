@@ -13,8 +13,12 @@ exports.LoginPage = class LoginPage {
     }
 
     async submitLoginForm(user, pass) {
-        await this.user.fill(user);
-        await this.pass.fill(pass);
+        if(user != null){
+            await this.user.fill(user);
+        }
+        if(pass != null){
+            await this.pass.fill(pass);
+        }
         await this.loginButton.click();
     }
 }
